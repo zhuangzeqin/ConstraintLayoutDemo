@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<!--    app:layout_constraintDimensionRatio="h,16:8"  按照宽高的比例，也可以-->
+<!--    app:layout_constraintDimensionRatio="w,1:3"   按照高宽的比例-->
+
+    <!--
+    layout_constraintDimensionRatio（宽高比）
+    如果想实现一个固定宽高比的顶部标题栏的话，可以将宽和高设置为 0dp，
+    然后为其设置 app:layout_constraintDimensionRatio 属性，设定宽高比为16：7-->
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintDimensionRatio="h,16:8"
+        android:gravity="center"
+        android:text="@string/app_name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <!--底部  app:layout_constraintDimensionRatio="w,1:3"-->
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintDimensionRatio="w,1:6"
+        android:gravity="center"
+        android:text="stringapp_name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+    <!--剩余布局居中-->
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:background="#ff0000"
+        app:layout_constraintDimensionRatio="w,15:25"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv1"
+        app:layout_constraintBottom_toTopOf="@+id/tv2"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

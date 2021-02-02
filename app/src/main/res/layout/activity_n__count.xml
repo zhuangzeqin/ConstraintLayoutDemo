@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp">
+<!--这其中的间距，
+主要是通过layout_constraintWidth_percent来设置在当前容器尺寸下所占百分比来进一步约束大小。
+如果去掉这个属性，那么会直接等分父容器尺寸。-->
+    <ImageView
+        android:id="@+id/bookCover1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@mipmap/head14"
+        app:layout_constraintDimensionRatio="0.74:1"
+        app:layout_constraintEnd_toStartOf="@+id/bookCover2"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.30"
+        />
+
+    <ImageView
+        android:id="@+id/bookCover2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="0.74:1"
+        app:layout_constraintEnd_toStartOf="@+id/bookCover3"
+        app:layout_constraintStart_toEndOf="@+id/bookCover1"
+        app:layout_constraintTop_toTopOf="@+id/bookCover1"
+        app:layout_constraintWidth_percent="0.30"
+        android:src="@mipmap/head14"
+        />
+
+    <ImageView
+        android:id="@+id/bookCover3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="0.74:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bookCover2"
+        app:layout_constraintTop_toTopOf="@+id/bookCover2"
+        app:layout_constraintWidth_percent="0.30"
+        android:src="@mipmap/head14"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

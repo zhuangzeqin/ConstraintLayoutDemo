@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_img_wh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="图片wh固定比例"
+        app:layout_constraintBottom_toTopOf="@id/btn_N_Count"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_N_Count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="N等分布局"
+        app:layout_constraintGuide_percent=""
+        app:layout_constraintTop_toBottomOf="@id/btn_img_wh" />
+<!--这会将按钮限制为屏幕高度的20%和屏幕宽度的65%-->
+<!--    <Button-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        app:layout_constraintHeight_percent="0.2"-->
+<!--        app:layout_constraintWidth_percent="0.65" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
